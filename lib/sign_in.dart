@@ -63,11 +63,11 @@ class _SignInState extends State<SignIn> {
   }
 
   _getBackgroundColor() {
-return Container(
-              decoration: new BoxDecoration(
-                color: Colors.blue.withAlpha(120),
-              ),
-            );
+    return Container(
+      decoration: new BoxDecoration(
+        color: Colors.blue.withAlpha(120),
+      ),
+    );
   }
 
   _getLoginButtons() {
@@ -76,68 +76,67 @@ return Container(
 
   _getContent() {
     return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                SizedBox(
-                  height: 50.0,
-                ),
-                Image(
-                  image: AssetImage("assets/images/white-logo.png"),
-                  width: 150.0,
-                ),
-                Text(
-                  "WaveSpy",
-                  style: TextStyle(color: Colors.white, fontSize: 40),
-                ),
-                Container(
-                  margin:
-                      const EdgeInsets.only(left: 30.0, right: 30.0, top: 40.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "View and share videos of current ocean conditions.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  margin: const EdgeInsets.only(left: 20, right: 20),
-                  width: double.infinity,
-                  child: FlatButton(
-                    color: Colors.white,
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: const Text('Sign Up with Email'),
-                    onPressed: () async {},
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20, right: 20),
-                  width: double.infinity,
-                  child: FlatButton(
-                    color: Colors.blueAccent,
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: const Text(
-                      'Log back in',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    onPressed: () async {},
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                      bottom: 16, top: 20, left: 20, right: 20),
-                  width: double.infinity,
-                  child: FlatButton(
-                    child: const Text(
-                      'Later...',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ],
-            );
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        SizedBox(
+          height: 50.0,
+        ),
+        Image(
+          image: AssetImage("assets/images/white-logo.png"),
+          width: 150.0,
+        ),
+        Text(
+          "WaveSpy",
+          style: TextStyle(color: Colors.white, fontSize: 40),
+        ),
+        Container(
+          margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 40.0),
+          alignment: Alignment.center,
+          child: Text(
+            "View and share videos of current ocean conditions.",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        ),
+        Spacer(),
+        Container(
+          margin: const EdgeInsets.only(left: 20, right: 20),
+          width: double.infinity,
+          child: FlatButton(
+            color: Colors.white,
+            padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+            child: const Text('Sign Up with Email'),
+            onPressed: () async {},
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 10, left: 20, right: 20),
+          width: double.infinity,
+          child: FlatButton(
+            color: Colors.blueAccent,
+            padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+            child: const Text(
+              'Log back in',
+              style: TextStyle(color: Colors.white),
+            ),
+            onPressed: () async {},
+          ),
+        ),
+        Container(
+          margin:
+              const EdgeInsets.only(bottom: 16, top: 20, left: 20, right: 20),
+          width: double.infinity,
+          child: FlatButton(
+            child: const Text(
+              'Later...',
+              style: TextStyle(color: Colors.white),
+            ),
+            onPressed: () {},
+          ),
+        ),
+      ],
+    );
   }
 
   @override
