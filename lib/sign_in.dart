@@ -71,7 +71,42 @@ class _SignInState extends State<SignIn> {
   }
 
   _getLoginButtons() {
-    
+    return <Widget>[
+      Container(
+        margin: const EdgeInsets.only(left: 20, right: 20),
+        width: double.infinity,
+        child: FlatButton(
+          color: Colors.white,
+          padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+          child: const Text('Sign Up with Email'),
+          onPressed: () async {},
+        ),
+      ),
+      Container(
+        margin: const EdgeInsets.only(top: 10, left: 20, right: 20),
+        width: double.infinity,
+        child: FlatButton(
+          color: Colors.blueAccent,
+          padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+          child: const Text(
+            'Log back in',
+            style: TextStyle(color: Colors.white),
+          ),
+          onPressed: () async {},
+        ),
+      ),
+      Container(
+        margin: const EdgeInsets.only(bottom: 16, top: 20, left: 20, right: 20),
+        width: double.infinity,
+        child: FlatButton(
+          child: const Text(
+            'Later...',
+            style: TextStyle(color: Colors.white),
+          ),
+          onPressed: () {},
+        ),
+      ),
+    ];
   }
 
   _getContent() {
@@ -100,41 +135,7 @@ class _SignInState extends State<SignIn> {
           ),
         ),
         Spacer(),
-        Container(
-          margin: const EdgeInsets.only(left: 20, right: 20),
-          width: double.infinity,
-          child: FlatButton(
-            color: Colors.white,
-            padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-            child: const Text('Sign Up with Email'),
-            onPressed: () async {},
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 10, left: 20, right: 20),
-          width: double.infinity,
-          child: FlatButton(
-            color: Colors.blueAccent,
-            padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-            child: const Text(
-              'Log back in',
-              style: TextStyle(color: Colors.white),
-            ),
-            onPressed: () async {},
-          ),
-        ),
-        Container(
-          margin:
-              const EdgeInsets.only(bottom: 16, top: 20, left: 20, right: 20),
-          width: double.infinity,
-          child: FlatButton(
-            child: const Text(
-              'Later...',
-              style: TextStyle(color: Colors.white),
-            ),
-            onPressed: () {},
-          ),
-        ),
+        ..._getLoginButtons()
       ],
     );
   }
@@ -147,7 +148,6 @@ class _SignInState extends State<SignIn> {
           children: <Widget>[
             _getVideoBackground(),
             _getBackgroundColor(),
-            _getContent(),
             _getContent(),
           ],
         ),
