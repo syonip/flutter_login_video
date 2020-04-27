@@ -55,9 +55,7 @@ class _SignInState extends State<SignIn> {
 
   _getBackgroundColor() {
     return Container(
-      decoration: new BoxDecoration(
-        color: Colors.blue.withAlpha(120),
-      ),
+      color: Colors.blue.withAlpha(120),
     );
   }
 
