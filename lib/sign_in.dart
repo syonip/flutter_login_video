@@ -49,16 +49,7 @@ class _SignInState extends State<SignIn> {
     return AnimatedOpacity(
       opacity: _visible ? 1.0 : 0.0,
       duration: Duration(milliseconds: 1000),
-      child: SizedBox.expand(
-        child: FittedBox(
-          fit: BoxFit.fill,
-          child: SizedBox(
-            width: _controller.value.size?.width ?? 0,
-            height: _controller.value.size?.height ?? 0,
-            child: VideoPlayer(_controller),
-          ),
-        ),
-      ),
+      child: VideoPlayer(_controller),
     );
   }
 
